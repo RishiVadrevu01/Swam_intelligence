@@ -1,0 +1,202 @@
+[
+  {
+    "vehicle_id": "V001",
+    "position_consistency": 0.92,
+    "movement_consistency": 0.97,
+    "message_freshness": 0.93,
+    "sensor_consistency": 0.94,
+    "historical_trust_score": 0.93
+  },
+  {
+    "vehicle_id": "V002",
+    "position_consistency": 0.96,
+    "movement_consistency": 0.84,
+    "message_freshness": 0.93,
+    "sensor_consistency": 0.95,
+    "historical_trust_score": 0.91
+  },
+  {
+    "vehicle_id": "V003",
+    "position_consistency": 0.95,
+    "movement_consistency": 0.83,
+    "message_freshness": 0.97,
+    "sensor_consistency": 0.97,
+    "historical_trust_score": 0.86
+  },
+  {
+    "vehicle_id": "V004",
+    "position_consistency": 0.95,
+    "movement_consistency": 0.88,
+    "message_freshness": 0.95,
+    "sensor_consistency": 0.92,
+    "historical_trust_score": 0.96
+  },
+  {
+    "vehicle_id": "V005",
+    "position_consistency": 0.88,
+    "movement_consistency": 0.9,
+    "message_freshness": 0.98,
+    "sensor_consistency": 0.95,
+    "historical_trust_score": 0.82
+  },
+  {
+    "vehicle_id": "V006",
+    "position_consistency": 0.97,
+    "movement_consistency": 0.95,
+    "message_freshness": 0.93,
+    "sensor_consistency": 0.95,
+    "historical_trust_score": 0.9
+  },
+  {
+    "vehicle_id": "V007",
+    "position_consistency": 0.88,
+    "movement_consistency": 0.86,
+    "message_freshness": 0.95,
+    "sensor_consistency": 0.89,
+    "historical_trust_score": 0.92
+  },
+  {
+    "vehicle_id": "V008",
+    "position_consistency": 0.94,
+    "movement_consistency": 0.93,
+    "message_freshness": 0.94,
+    "sensor_consistency": 0.95,
+    "historical_trust_score": 0.86
+  },
+  {
+    "vehicle_id": "V009",
+    "position_consistency": 0.16,
+    "movement_consistency": 0.21,
+    "message_freshness": 0.11,
+    "sensor_consistency": 0.26,
+    "historical_trust_score": 0.35
+  },
+  {
+    "vehicle_id": "V010",
+    "position_consistency": 0.94,
+    "movement_consistency": 0.87,
+    "message_freshness": 0.94,
+    "sensor_consistency": 0.98,
+    "historical_trust_score": 0.81
+  },
+  {
+    "vehicle_id": "V011",
+    "position_consistency": 0.96,
+    "movement_consistency": 0.83,
+    "message_freshness": 0.97,
+    "sensor_consistency": 0.97,
+    "historical_trust_score": 0.82
+  },
+  {
+    "vehicle_id": "V012",
+    "position_consistency": 0.98,
+    "movement_consistency": 0.86,
+    "message_freshness": 0.97,
+    "sensor_consistency": 0.93,
+    "historical_trust_score": 0.87
+  },
+  {
+    "vehicle_id": "V013",
+    "position_consistency": 0.92,
+    "movement_consistency": 0.95,
+    "message_freshness": 0.91,
+    "sensor_consistency": 0.99,
+    "historical_trust_score": 0.81
+  },
+  {
+    "vehicle_id": "V014",
+    "position_consistency": 0.92,
+    "movement_consistency": 0.96,
+    "message_freshness": 0.92,
+    "sensor_consistency": 0.96,
+    "historical_trust_score": 0.84
+  },
+  {
+    "vehicle_id": "V015",
+    "position_consistency": 0.88,
+    "movement_consistency": 0.96,
+    "message_freshness": 0.98,
+    "sensor_consistency": 0.98,
+    "historical_trust_score": 0.86
+  },
+  {
+    "vehicle_id": "V016",
+    "position_consistency": 0.88,
+    "movement_consistency": 0.95,
+    "message_freshness": 0.97,
+    "sensor_consistency": 0.9,
+    "historical_trust_score": 0.85
+  },
+  {
+    "vehicle_id": "V017",
+    "position_consistency": 0.89,
+    "movement_consistency": 0.84,
+    "message_freshness": 0.99,
+    "sensor_consistency": 0.9,
+    "historical_trust_score": 0.87
+  },
+  {
+    "vehicle_id": "V018",
+    "position_consistency": 0.9,
+    "movement_consistency": 0.96,
+    "message_freshness": 0.99,
+    "sensor_consistency": 0.88,
+    "historical_trust_score": 0.86
+  },
+  {
+    "vehicle_id": "V019",
+    "position_consistency": 0.87,
+    "movement_consistency": 0.88,
+    "message_freshness": 0.92,
+    "sensor_consistency": 0.98,
+    "historical_trust_score": 0.93
+  },
+  {
+    "vehicle_id": "V020",
+    "position_consistency": 0.9,
+    "movement_consistency": 0.94,
+    "message_freshness": 0.98,
+    "sensor_consistency": 0.9,
+    "historical_trust_score": 0.91
+  },
+  {
+    "vehicle_id": "V021",
+    "position_consistency": 0.87,
+    "movement_consistency": 0.96,
+    "message_freshness": 0.92,
+    "sensor_consistency": 0.89,
+    "historical_trust_score": 0.87
+  },
+  {
+    "vehicle_id": "V022",
+    "position_consistency": 0.95,
+    "movement_consistency": 0.92,
+    "message_freshness": 0.93,
+    "sensor_consistency": 0.89,
+    "historical_trust_score": 0.91
+  },
+  {
+    "vehicle_id": "V023",
+    "position_consistency": 0.97,
+    "movement_consistency": 0.92,
+    "message_freshness": 0.98,
+    "sensor_consistency": 0.95,
+    "historical_trust_score": 0.85
+  },
+  {
+    "vehicle_id": "V024",
+    "position_consistency": 0.95,
+    "movement_consistency": 0.85,
+    "message_freshness": 0.91,
+    "sensor_consistency": 0.94,
+    "historical_trust_score": 0.9
+  },
+  {
+    "vehicle_id": "V025",
+    "position_consistency": 0.92,
+    "movement_consistency": 0.93,
+    "message_freshness": 0.93,
+    "sensor_consistency": 0.92,
+    "historical_trust_score": 0.82
+  }
+]
