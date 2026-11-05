@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
+import CockpitDashboard from './components/CockpitDashboard';
 import Dashboard from './pages/Dashboard';
 import TrafficMap from './pages/TrafficMap';
 import DigitalTwin from './pages/DigitalTwin';
@@ -7,11 +8,12 @@ import SecurityTrust from './pages/SecurityTrust';
 import PredictionCentre from './pages/PredictionCentre';
 import SwarmCoordination from './pages/SwarmCoordination';
 import EmergencyCorridor from './pages/EmergencyCorridor';
+import ResearchEvaluation from './pages/ResearchEvaluation';
 import api from './services/api';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState('dashboard');
-  const [activeScenario, setActiveScenario] = useState('Scenario A: Normal Emergency Corridor');
+  const [activeTab, setActiveTab] = useState('cockpit');
+  const [activeScenario, setActiveScenario] = useState('Scenario A: Normal Traffic');
   const [loading, setLoading] = useState(false);
   const [selectedVehicleForTwin, setSelectedVehicleForTwin] = useState('V001');
 
@@ -122,6 +124,17 @@ export default function App() {
       />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        {activeTab === 'cockpit' && (
+          <CockpitDashboard
+            cockpitData={summary?.cockpit_view}
+            activeScenario={activeScenario}
+            onSelectScenario={handleSelectScenario}
+            onTriggerReplan={() => handleTriggerReplan('V004')}
+            onResetScenario={handleResetScenario}
+            loading={loading}
+          />
+        )}
+
         {activeTab === 'dashboard' && (
           <Dashboard
             summary={summary}
@@ -178,6 +191,10 @@ export default function App() {
             onRefreshCorridor={(newData) => setCorridorData(newData)}
             onTriggerReplan={handleTriggerReplan}
           />
+        )}
+
+        {activeTab === 'evaluation' && (
+          <ResearchEvaluation />
         )}
       </main>
 

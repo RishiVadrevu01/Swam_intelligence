@@ -12,6 +12,7 @@ const client = axios.create({
 export const api = {
   // Dashboard
   getDashboardSummary: () => client.get('/dashboard/summary'),
+  getCockpit: () => client.get('/dashboard/cockpit'),
   getDashboardEvents: () => client.get('/dashboard/events'),
   getDashboardMetrics: () => client.get('/dashboard/metrics'),
 
@@ -60,7 +61,11 @@ export const api = {
   initializeCorridor: () => client.post('/corridor/initialize'),
   updateCorridor: () => client.post('/corridor/update'),
   replanCorridor: (vehicleId = null) => client.post('/corridor/replan', { vehicle_id: vehicleId }),
-  getCorridorStatus: () => client.get('/corridor/status')
+  getCorridorStatus: () => client.get('/corridor/status'),
+
+  // Research Evaluation & Benchmarks
+  getEvaluationMetrics: () => client.get('/evaluation/metrics'),
+  downloadEvaluationCsv: () => client.get('/evaluation/download-csv', { responseType: 'blob' })
 };
 
 export default api;

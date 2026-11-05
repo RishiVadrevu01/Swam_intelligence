@@ -109,31 +109,35 @@ class EmergencyCorridorManager:
         self.corridor_status = "COORDINATING"
 
         # Step 1: Identify Emergency Vehicle
-        ev_id = self.emergency_vehicle.get("emergency_vehicle_id", "EV01")
-        self._log_event("STEP_1_EV_IDENTIFY", f"Emergency Vehicle {ev_id} registered with priority 1 (Dispatch Active)")
+        has_ev = bool(self.emergency_vehicle and self.emergency_vehicle.get("emergency_vehicle_id"))
+        if not has_ev:
+            self._log_event("STEP_1_EV_IDENTIFY", "No Emergency Vehicles in vicinity. Normal traffic monitoring mode active.", "INFO")
+        else:
+            ev_id = self.emergency_vehicle.get("emergency_vehicle_id", "EV01")
+            self._log_event("STEP_1_EV_IDENTIFY", f"Emergency Vehicle {ev_id} registered with priority 1 (Dispatch Active)")
 
-        # Step 2: Emergency Announcement Packet
-        ev_msg = {
-            "sender_id": ev_id,
-            "receiver_id": "BROADCAST",
-            "message_type": "EMERGENCY_ANNOUNCEMENT",
-            "timestamp": time.time(),
-            "sequence_number": int(time.time()) % 10000,
-            "message_content": {
-                "route": self.emergency_vehicle.get("intended_route", []),
-                "target_lane": 2,
-                "urgency": "CRITICAL"
+            # Step 2: Emergency Announcement Packet
+            ev_msg = {
+                "sender_id": ev_id,
+                "receiver_id": "BROADCAST",
+                "message_type": "EMERGENCY_ANNOUNCEMENT",
+                "timestamp": time.time(),
+                "sequence_number": int(time.time()) % 10000,
+                "message_content": {
+                    "route": self.emergency_vehicle.get("intended_route", []),
+                    "target_lane": 2,
+                    "urgency": "CRITICAL"
+                }
             }
-        }
 
-        # Step 3 & 4: Cryptographic signing, ECDSA authentication & freshness check
-        signed_ev_msg = v2x_security.sign_message(ev_id, ev_msg)
-        is_valid, auth_reason = v2x_security.verify_message(signed_ev_msg)
-        self._log_event(
-            "STEP_3_4_V2X_AUTH",
-            f"EV announcement verified: ECDSA NIST P-256 signature VALID ({auth_reason})",
-            "SUCCESS" if is_valid else "WARNING"
-        )
+            # Step 3 & 4: Cryptographic signing, ECDSA authentication & freshness check
+            signed_ev_msg = v2x_security.sign_message(ev_id, ev_msg)
+            is_valid, auth_reason = v2x_security.verify_message(signed_ev_msg)
+            self._log_event(
+                "STEP_3_4_V2X_AUTH",
+                f"EV announcement verified: ECDSA NIST P-256 signature VALID ({auth_reason})",
+                "SUCCESS" if is_valid else "WARNING"
+            )
 
         # Step 5 & 6 & 7: Evaluate Trust, Isolation Forest Anomaly Detection & Initialize Digital Twins
         trust_map = {}
@@ -211,6 +215,28 @@ class EmergencyCorridorManager:
         )
 
         # Step 10: DPSO Swarm Coordination Optimization
+        if not has_ev:
+            self.dpso_results = {
+                "total_iterations": 0,
+                "initial_fitness": 0.0,
+                "best_fitness": 0.0,
+                "participating_agents": [v["vehicle_id"] for v in self.vehicles],
+                "recommended_actions": [],
+                "convergence_history": [],
+                "conflict_count": 0,
+                "execution_time_seconds": 0.001
+            }
+            self.corridor_status = "NORMAL_MONITORING"
+            astar_router.update_road_weights(self.roads)
+            self.original_route = astar_router.find_route("INT_1", "INT_5")
+            self.current_route = self.original_route
+            self._log_event(
+                "STEP_12_16_NORMAL",
+                "Normal traffic monitoring active: No emergency vehicle nearby. Vehicles proceed on regular routes.",
+                "SUCCESS"
+            )
+            return self.get_corridor_status()
+
         # Exclude quarantined / suspicious vehicles from cooperative corridor movements
         cooperative_vehicles = [
             v for v in self.vehicles
@@ -320,6 +346,74 @@ class EmergencyCorridorManager:
         )
 
         return self.get_corridor_status()
+
+    def get_cockpit_view(self) -> Dict[str, Any]:
+        """
+        Generates cockpit data tailored for the primary reference UI:
+        Left: Local Digital Twin traffic road state (ego vehicle, nearby vehicles, destination, ambulance with radar)
+        Right Top: Trip Information (Speed, Distance, Traffic Congestion)
+        Right Bottom: System Recommendation (Normal vs Emergency guidance)
+        """
+        has_ev = bool(self.emergency_vehicle and self.emergency_vehicle.get("emergency_vehicle_id"))
+        is_replan = bool(self.replan_data is not None)
+        scenario = self.active_scenario
+
+        if not has_ev:
+            # Scenario A: Normal Traffic (Top screen in reference image)
+            speed_kmh = 42
+            distance_to_dest_km = 2.8
+            congestion_level = "Low"
+            recommendation = {
+                "detected": False,
+                "title": "No Emergency Vehicles Nearby",
+                "subtitle": "Continue on the planned route to the destination.",
+                "action": "Maintain Current Route",
+                "checklist": [
+                    "Normal speed maintained (42 km/h).",
+                    "No yielding maneuver necessary.",
+                    "Corridor path clear to destination."
+                ]
+            }
+        else:
+            # Scenario B, C, D, E, F: Emergency Vehicle approaching (Bottom screen in reference image)
+            speed_kmh = 32 if not is_replan else 28
+            distance_to_dest_km = 2.6 if not is_replan else 2.4
+            congestion_level = "Moderate" if "Scenario C" not in scenario else "High"
+            action_text = "Move to the Right Lane"
+            if is_replan:
+                action_text = "Clear Center Lane for Bypass"
+
+            recommendation = {
+                "detected": True,
+                "title": "Emergency Vehicle Detected",
+                "subtitle": "1 vehicle (Ambulance) behind at 120 m",
+                "distance_meters": 120,
+                "direction": "behind",
+                "movement": action_text,
+                "checklist": [
+                    "Give way and keep the lane clear.",
+                    "Reduce speed smoothly.",
+                    "Maintain a safe distance (>= 50 m)."
+                ]
+            }
+
+        return {
+            "speed_kmh": speed_kmh,
+            "distance_to_dest_km": distance_to_dest_km,
+            "congestion_level": congestion_level,
+            "recommendation": recommendation,
+            "has_emergency_vehicle": has_ev,
+            "emergency_vehicle": self.emergency_vehicle if has_ev else None,
+            "corridor_status": self.corridor_status,
+            "system_active": True,
+            "active_scenario": self.active_scenario,
+            "modules_status": {
+                "local_digital_twin": "OPERATIONAL",
+                "trust_compliance": "OPERATIONAL",
+                "swarm_coordination": "OPERATIONAL",
+                "system_active": "ACTIVE"
+            }
+        }
 
     def get_corridor_status(self) -> Dict[str, Any]:
         """

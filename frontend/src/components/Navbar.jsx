@@ -9,15 +9,18 @@ import {
   Activity, 
   RefreshCw, 
   AlertTriangle,
-  RotateCcw
+  RotateCcw,
+  Gauge,
+  FileSpreadsheet
 } from 'lucide-react';
 
 export const SCENARIOS = [
-  "Scenario A: Normal Emergency Corridor",
-  "Scenario B: Non-Cooperative Drivers",
-  "Scenario C: Suspicious Vehicle Information",
-  "Scenario D: High Traffic Congestion",
-  "Scenario E: Dynamic Traffic Conditions"
+  "Scenario A: Normal Traffic",
+  "Scenario B: Ambulance Enters Communication Range",
+  "Scenario C: Heavy Congestion",
+  "Scenario D: Driver Non-Compliance",
+  "Scenario E: Unreliable Vehicle Information",
+  "Scenario F: Combined Emergency Scenario"
 ];
 
 export default function Navbar({ 
@@ -31,13 +34,15 @@ export default function Navbar({
   loading 
 }) {
   const navItems = [
-    { id: 'dashboard', label: 'Executive Dashboard', icon: Activity },
+    { id: 'cockpit', label: 'Cockpit View (Reference)', icon: Gauge },
+    { id: 'dashboard', label: 'Executive Overview', icon: Activity },
     { id: 'map', label: 'Live Traffic Map', icon: Map },
     { id: 'digital-twins', label: 'Local Digital Twins', icon: Cpu },
     { id: 'security-trust', label: 'Security & Trust', icon: ShieldCheck },
     { id: 'predictions', label: 'AI Predictions', icon: BrainCircuit },
     { id: 'swarm', label: 'Swarm DPSO', icon: Network },
     { id: 'corridor', label: 'Corridor Operations', icon: Siren },
+    { id: 'evaluation', label: 'Research Evaluation', icon: FileSpreadsheet },
   ];
 
   const getStatusColor = (status) => {

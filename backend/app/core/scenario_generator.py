@@ -131,16 +131,21 @@ class ScenarioGenerator:
             end_coord = INTERSECTIONS[r["end_intersection"]]
 
             # Congestion based on scenario
-            if "Scenario D" in scenario_type:
-                density = random.uniform(55.0, 85.0)
-                avg_speed = random.uniform(15.0, 28.0)
-                congestion = "Severe" if density > 70 else "High"
-                available_space = random.uniform(10.0, 25.0)
-            else:
-                density = random.uniform(20.0, 45.0)
-                avg_speed = random.uniform(35.0, 52.0)
-                congestion = "Moderate" if density > 35 else "Low"
-                available_space = random.uniform(45.0, 80.0)
+            if "Scenario C" in scenario_type or "Scenario F" in scenario_type:
+                density = random.uniform(65.0, 88.0)
+                avg_speed = random.uniform(16.0, 24.0)
+                congestion = "High" if density < 78 else "Severe"
+                available_space = random.uniform(12.0, 28.0)
+            elif "Scenario B" in scenario_type or "Scenario D" in scenario_type:
+                density = random.uniform(35.0, 48.0)
+                avg_speed = random.uniform(30.0, 38.0)
+                congestion = "Moderate"
+                available_space = random.uniform(35.0, 55.0)
+            else: # Scenario A: Normal Traffic
+                density = random.uniform(18.0, 30.0)
+                avg_speed = random.uniform(40.0, 48.0)
+                congestion = "Low"
+                available_space = random.uniform(60.0, 85.0)
 
             road_entry = {
                 "road_id": r["road_id"],
@@ -162,23 +167,29 @@ class ScenarioGenerator:
             }
             roads_data.append(road_entry)
 
-        # 2. Emergency Vehicle Generation (EV01)
-        # Positioned approaching Market St Segment 1 heading towards Hospital Junction (INT_5)
-        ev_start = INTERSECTIONS["INT_1"]
-        emergency_vehicle = {
-            "emergency_vehicle_id": "EV01",
-            "vehicle_type": "Ambulance",
-            "latitude": round(ev_start["lat"] + 0.0003, 6),
-            "longitude": round(ev_start["lon"] + 0.0002, 6),
-            "speed": 62.5,
-            "heading": 48.0,
-            "destination": "INT_5 (Hospital Junction)",
-            "priority_level": 1,
-            "emergency_status": "ACTIVE_DISPATCH",
-            "intended_route": ["ROAD_01", "ROAD_02", "ROAD_03", "ROAD_04"],
-            "current_road_id": "ROAD_01",
-            "target_lane": 2  # Center lane intended for emergency corridor
-        }
+        # 2. Emergency Vehicle Generation
+        is_normal_traffic = "Scenario A" in scenario_type
+        if is_normal_traffic:
+            emergency_vehicle = None
+            ev_list = []
+        else:
+            ev_start = INTERSECTIONS["INT_1"]
+            emergency_vehicle = {
+                "emergency_vehicle_id": "EV01",
+                "vehicle_type": "Ambulance",
+                "latitude": round(ev_start["lat"] + 0.0003, 6),
+                "longitude": round(ev_start["lon"] + 0.0002, 6),
+                "speed": 62.5,
+                "heading": 48.0,
+                "destination": "INT_5 (Hospital Junction)",
+                "priority_level": 1,
+                "emergency_status": "ACTIVE_DISPATCH",
+                "intended_route": ["ROAD_01", "ROAD_02", "ROAD_03", "ROAD_04"],
+                "current_road_id": "ROAD_01",
+                "target_lane": 2,  # Center lane intended for emergency corridor
+                "distance_to_ego_meters": 120.0
+            }
+            ev_list = [emergency_vehicle]
 
         # 3. Normal Vehicles Generation
         normal_vehicles = []
@@ -318,29 +329,30 @@ class ScenarioGenerator:
                 signed_beacon = v2x_security.sign_message(vid, beacon_payload)
             v2x_messages.append(signed_beacon)
 
-        # Emergency vehicle announcement message
-        v2x_security.get_or_create_vehicle_keys("EV01", role="EMERGENCY_VEHICLE")
-        ev_announcement = {
-            "sender_id": "EV01",
-            "receiver_id": "BROADCAST",
-            "message_type": "EMERGENCY_ANNOUNCEMENT",
-            "timestamp": now,
-            "sequence_number": 1,
-            "message_content": {
-                "emergency_vehicle_id": "EV01",
-                "priority_level": 1,
-                "target_lane": 2,
-                "intended_route": emergency_vehicle["intended_route"],
-                "destination": emergency_vehicle["destination"],
-                "estimated_speed": emergency_vehicle["speed"]
+        # Emergency vehicle announcement message (only if emergency vehicle exists)
+        if emergency_vehicle is not None:
+            v2x_security.get_or_create_vehicle_keys("EV01", role="EMERGENCY_VEHICLE")
+            ev_announcement = {
+                "sender_id": "EV01",
+                "receiver_id": "BROADCAST",
+                "message_type": "EMERGENCY_ANNOUNCEMENT",
+                "timestamp": now,
+                "sequence_number": 1,
+                "message_content": {
+                    "emergency_vehicle_id": "EV01",
+                    "priority_level": 1,
+                    "target_lane": 2,
+                    "intended_route": emergency_vehicle["intended_route"],
+                    "destination": emergency_vehicle["destination"],
+                    "estimated_speed": emergency_vehicle["speed"]
+                }
             }
-        }
-        signed_ev_msg = v2x_security.sign_message("EV01", ev_announcement)
-        v2x_messages.insert(0, signed_ev_msg)
+            signed_ev_msg = v2x_security.sign_message("EV01", ev_announcement)
+            v2x_messages.insert(0, signed_ev_msg)
 
         # Save to disk
         self._save_json("roads.json", roads_data)
-        self._save_json("emergency_vehicles.json", [emergency_vehicle])
+        self._save_json("emergency_vehicles.json", ev_list)
         self._save_json("vehicles.json", normal_vehicles)
         self._save_json("driver_behaviour.json", driver_behaviours)
         self._save_json("trust_data.json", trust_records)
@@ -349,7 +361,7 @@ class ScenarioGenerator:
         return {
             "scenario": scenario_type,
             "vehicle_count": len(normal_vehicles),
-            "emergency_vehicles": [emergency_vehicle],
+            "emergency_vehicles": ev_list,
             "roads_count": len(roads_data),
             "messages_count": len(v2x_messages)
         }

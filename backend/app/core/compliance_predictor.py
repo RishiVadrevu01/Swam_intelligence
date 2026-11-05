@@ -1,7 +1,13 @@
 import os
 import json
 import joblib
-import xgboost as xgb
+try:
+    import xgboost as xgb
+    HAS_XGBOOST = True
+except ImportError:
+    xgb = None
+    HAS_XGBOOST = False
+    from sklearn.ensemble import GradientBoostingClassifier
 import numpy as np
 from typing import Dict, List, Any, Tuple
 from app.config import MODELS_DIR
@@ -26,15 +32,23 @@ class CompliancePredictor:
     """
     def __init__(self):
         self.model_path = MODELS_DIR / "compliance_xgb.joblib"
-        self.model = xgb.XGBClassifier(
-            n_estimators=80,
-            max_depth=4,
-            learning_rate=0.08,
-            objective="multi:softprob",
-            num_class=3,  # 0: Low Compliance, 1: Medium Compliance, 2: High Compliance
-            random_state=42,
-            eval_metric="mlogloss"
-        )
+        if HAS_XGBOOST:
+            self.model = xgb.XGBClassifier(
+                n_estimators=80,
+                max_depth=4,
+                learning_rate=0.08,
+                objective="multi:softprob",
+                num_class=3,  # 0: Low Compliance, 1: Medium Compliance, 2: High Compliance
+                random_state=42,
+                eval_metric="mlogloss"
+            )
+        else:
+            self.model = GradientBoostingClassifier(
+                n_estimators=80,
+                max_depth=4,
+                learning_rate=0.08,
+                random_state=42
+            )
         self.is_trained = False
         self.feature_importances: Dict[str, float] = {}
         self._load_or_train()

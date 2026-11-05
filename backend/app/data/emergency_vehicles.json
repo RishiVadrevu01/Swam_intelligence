@@ -16,6 +16,7 @@
       "ROAD_04"
     ],
     "current_road_id": "ROAD_01",
-    "target_lane": 2
+    "target_lane": 2,
+    "distance_to_ego_meters": 120.0
   }
 ]

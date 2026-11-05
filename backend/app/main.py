@@ -17,6 +17,7 @@ from app.api.routing import router as routing_router
 from app.api.coordination import router as coordination_router
 from app.api.corridor import router as corridor_router
 from app.api.dashboard import router as dashboard_router
+from app.api.evaluation import router as evaluation_router
 from app.core.corridor_manager import corridor_manager
 
 
@@ -45,6 +46,7 @@ app.include_router(prediction_router)
 app.include_router(routing_router)
 app.include_router(coordination_router)
 app.include_router(corridor_router)
+app.include_router(evaluation_router)
 
 
 @app.on_event("startup")

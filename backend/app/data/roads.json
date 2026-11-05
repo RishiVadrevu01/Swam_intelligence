@@ -10,11 +10,11 @@
     "end_lat": 37.778,
     "end_lon": -122.418,
     "lanes": 3,
-    "traffic_density": 36.0,
-    "average_speed": 35.4,
+    "traffic_density": 43.3,
+    "average_speed": 30.2,
     "road_capacity": 60,
     "congestion_level": "Moderate",
-    "available_space": 54.6,
+    "available_space": 40.5,
     "road_direction": "Northeast"
   },
   {
@@ -28,11 +28,11 @@
     "end_lat": 37.781,
     "end_lon": -122.415,
     "lanes": 3,
-    "traffic_density": 25.6,
-    "average_speed": 47.5,
+    "traffic_density": 37.9,
+    "average_speed": 35.9,
     "road_capacity": 60,
-    "congestion_level": "Low",
-    "available_space": 68.7,
+    "congestion_level": "Moderate",
+    "available_space": 48.5,
     "road_direction": "Northeast"
   },
   {
@@ -46,11 +46,11 @@
     "end_lat": 37.7845,
     "end_lon": -122.411,
     "lanes": 3,
-    "traffic_density": 42.3,
-    "average_speed": 36.5,
+    "traffic_density": 46.6,
+    "average_speed": 30.7,
     "road_capacity": 60,
     "congestion_level": "Moderate",
-    "available_space": 59.8,
+    "available_space": 43.4,
     "road_direction": "Northeast"
   },
   {
@@ -64,11 +64,11 @@
     "end_lat": 37.788,
     "end_lon": -122.407,
     "lanes": 3,
-    "traffic_density": 20.7,
-    "average_speed": 38.7,
+    "traffic_density": 35.4,
+    "average_speed": 31.7,
     "road_capacity": 60,
-    "congestion_level": "Low",
-    "available_space": 62.7,
+    "congestion_level": "Moderate",
+    "available_space": 45.1,
     "road_direction": "Northeast"
   },
   {
@@ -82,11 +82,11 @@
     "end_lat": 37.777,
     "end_lon": -122.424,
     "lanes": 2,
-    "traffic_density": 20.7,
-    "average_speed": 38.4,
+    "traffic_density": 35.3,
+    "average_speed": 31.6,
     "road_capacity": 60,
-    "congestion_level": "Low",
-    "available_space": 67.7,
+    "congestion_level": "Moderate",
+    "available_space": 48.0,
     "road_direction": "East"
   },
   {
@@ -100,11 +100,11 @@
     "end_lat": 37.7805,
     "end_lon": -122.42,
     "lanes": 2,
-    "traffic_density": 33.6,
-    "average_speed": 38.7,
+    "traffic_density": 42.1,
+    "average_speed": 31.8,
     "road_capacity": 60,
-    "congestion_level": "Low",
-    "available_space": 65.6,
+    "congestion_level": "Moderate",
+    "available_space": 46.8,
     "road_direction": "Northeast"
   },
   {
@@ -118,11 +118,11 @@
     "end_lat": 37.784,
     "end_lon": -122.416,
     "lanes": 2,
-    "traffic_density": 40.2,
-    "average_speed": 35.1,
+    "traffic_density": 45.5,
+    "average_speed": 30.1,
     "road_capacity": 60,
     "congestion_level": "Moderate",
-    "available_space": 73.2,
+    "available_space": 51.1,
     "road_direction": "Northeast"
   },
   {
@@ -136,11 +136,11 @@
     "end_lat": 37.7845,
     "end_lon": -122.411,
     "lanes": 2,
-    "traffic_density": 37.5,
-    "average_speed": 40.8,
+    "traffic_density": 44.1,
+    "average_speed": 32.7,
     "road_capacity": 60,
     "congestion_level": "Moderate",
-    "available_space": 50.4,
+    "available_space": 38.1,
     "road_direction": "North"
   },
   {
@@ -154,11 +154,11 @@
     "end_lat": 37.778,
     "end_lon": -122.418,
     "lanes": 2,
-    "traffic_density": 43.9,
-    "average_speed": 40.7,
+    "traffic_density": 47.4,
+    "average_speed": 32.7,
     "road_capacity": 60,
     "congestion_level": "Moderate",
-    "available_space": 48.2,
+    "available_space": 36.9,
     "road_direction": "North"
   },
   {
@@ -172,11 +172,11 @@
     "end_lat": 37.788,
     "end_lon": -122.407,
     "lanes": 2,
-    "traffic_density": 22.4,
-    "average_speed": 49.4,
+    "traffic_density": 36.3,
+    "average_speed": 36.8,
     "road_capacity": 60,
-    "congestion_level": "Low",
-    "available_space": 66.1,
+    "congestion_level": "Moderate",
+    "available_space": 47.1,
     "road_direction": "Northeast"
   }
 ]

@@ -35,6 +35,7 @@ def get_dashboard_summary():
 
     return {
         "status": "success",
+        "cockpit_view": corridor_manager.get_cockpit_view(),
         "kpis": {
             "total_vehicles": status["total_vehicles"],
             "active_emergency_vehicles": 1 if corridor_manager.emergency_vehicle else 0,
@@ -55,6 +56,14 @@ def get_dashboard_summary():
             "compliance_distribution": compliance_chart
         },
         "recent_events": status["recent_events"][:12]
+    }
+
+
+@router.get("/cockpit")
+def get_dashboard_cockpit():
+    return {
+        "status": "success",
+        "cockpit_view": corridor_manager.get_cockpit_view()
     }
 
 
