@@ -80,7 +80,8 @@ export default function TrafficMap({
   const [filter, setFilter] = useState('ALL');
   const [selectedVehicle, setSelectedVehicle] = useState(null);
 
-  const ev = emergencyVehicles[0] || corridorData?.emergency_vehicle;
+  const rawEv = (emergencyVehicles && emergencyVehicles.length > 0 ? emergencyVehicles[0] : null) || corridorData?.emergency_vehicle;
+  const ev = (rawEv && rawEv.latitude != null && rawEv.longitude != null) ? rawEv : null;
   const activeRoute = corridorData?.active_route;
   const isReplanned = corridorData?.status === 'REPLANNING' || Boolean(corridorData?.replan_data);
 
@@ -182,6 +183,9 @@ export default function TrafficMap({
 
             {/* Road Segment Polylines */}
             {roads.map((road) => {
+              if (!road || road.start_lat == null || road.start_lon == null || road.end_lat == null || road.end_lon == null) {
+                return null;
+              }
               const positions = [
                 [road.start_lat, road.start_lon],
                 [road.end_lat, road.end_lon]
@@ -212,7 +216,7 @@ export default function TrafficMap({
             })}
 
             {/* Emergency Vehicle Active Corridor Route */}
-            {activeRoute?.route_coordinates && (
+            {activeRoute?.route_coordinates && activeRoute.route_coordinates.length > 1 && (
               <Polyline
                 positions={activeRoute.route_coordinates}
                 pathOptions={{
@@ -232,7 +236,7 @@ export default function TrafficMap({
             )}
 
             {/* Emergency Vehicle Marker */}
-            {ev && filter !== 'SUSPICIOUS' && filter !== 'HIGH_COMPLIANCE' && filter !== 'LOW_COMPLIANCE' && filter !== 'NORMAL' && (
+            {ev && ev.latitude != null && ev.longitude != null && filter !== 'SUSPICIOUS' && filter !== 'HIGH_COMPLIANCE' && filter !== 'LOW_COMPLIANCE' && filter !== 'NORMAL' && (
               <Marker
                 position={[ev.latitude, ev.longitude]}
                 icon={createCustomIcon('EMERGENCY', true, false, 'High')}
@@ -258,6 +262,7 @@ export default function TrafficMap({
 
             {/* Normal Vehicles Markers */}
             {filter !== 'EMERGENCY' && filteredVehicles.map((v) => {
+              if (!v || v.latitude == null || v.longitude == null) return null;
               const vid = v.vehicle_id;
               const t = getVehicleTrust(vid);
               const c = getVehicleCompliance(vid);

@@ -19,9 +19,9 @@
   },
   {
     "vehicle_id": "V002",
-    "previous_yielding_actions": 0,
-    "current_yielding_status": "NON_YIELDING",
-    "response_time": 10.24,
+    "previous_yielding_actions": 5,
+    "current_yielding_status": "MAINTAINING",
+    "response_time": 2.42,
     "lane_change_history": [
       "Lane 3 -> Lane 2",
       "Lane 3"
@@ -33,7 +33,7 @@
       -0.16,
       0.24
     ],
-    "driver_compliance_label": "Low"
+    "driver_compliance_label": "High"
   },
   {
     "vehicle_id": "V003",
@@ -55,9 +55,9 @@
   },
   {
     "vehicle_id": "V004",
-    "previous_yielding_actions": 4,
-    "current_yielding_status": "YIELDING",
-    "response_time": 1.38,
+    "previous_yielding_actions": 0,
+    "current_yielding_status": "NON_YIELDING",
+    "response_time": 7.91,
     "lane_change_history": [
       "Lane 2 -> Lane 1",
       "Lane 2"
@@ -69,13 +69,13 @@
       0.31,
       0.26
     ],
-    "driver_compliance_label": "High"
+    "driver_compliance_label": "Low"
   },
   {
     "vehicle_id": "V005",
-    "previous_yielding_actions": 1,
-    "current_yielding_status": "NON_YIELDING",
-    "response_time": 10.96,
+    "previous_yielding_actions": 6,
+    "current_yielding_status": "MAINTAINING",
+    "response_time": 2.74,
     "lane_change_history": [
       "Lane 3 -> Lane 2",
       "Lane 3"
@@ -87,7 +87,7 @@
       0.29,
       0.25
     ],
-    "driver_compliance_label": "Low"
+    "driver_compliance_label": "Medium"
   },
   {
     "vehicle_id": "V006",
@@ -127,9 +127,9 @@
   },
   {
     "vehicle_id": "V008",
-    "previous_yielding_actions": 0,
-    "current_yielding_status": "NON_YIELDING",
-    "response_time": 8.04,
+    "previous_yielding_actions": 5,
+    "current_yielding_status": "MAINTAINING",
+    "response_time": 1.44,
     "lane_change_history": [
       "Lane 3 -> Lane 2",
       "Lane 3"
@@ -141,7 +141,7 @@
       0.81,
       0.46
     ],
-    "driver_compliance_label": "Low"
+    "driver_compliance_label": "High"
   },
   {
     "vehicle_id": "V009",
@@ -199,9 +199,9 @@
   },
   {
     "vehicle_id": "V012",
-    "previous_yielding_actions": 1,
-    "current_yielding_status": "NON_YIELDING",
-    "response_time": 10.48,
+    "previous_yielding_actions": 7,
+    "current_yielding_status": "MAINTAINING",
+    "response_time": 2.52,
     "lane_change_history": [
       "Lane 1 -> Lane 1",
       "Lane 1"
@@ -213,7 +213,7 @@
       -0.16,
       -0.18
     ],
-    "driver_compliance_label": "Low"
+    "driver_compliance_label": "Medium"
   },
   {
     "vehicle_id": "V013",
@@ -289,9 +289,9 @@
   },
   {
     "vehicle_id": "V017",
-    "previous_yielding_actions": 0,
-    "current_yielding_status": "NON_YIELDING",
-    "response_time": 7.54,
+    "previous_yielding_actions": 4,
+    "current_yielding_status": "MAINTAINING",
+    "response_time": 1.22,
     "lane_change_history": [
       "Lane 3 -> Lane 2",
       "Lane 3"
@@ -303,113 +303,113 @@
       -1.37,
       -1.17
     ],
-    "driver_compliance_label": "Low"
+    "driver_compliance_label": "High"
   },
   {
     "vehicle_id": "V018",
-    "previous_yielding_actions": 10,
-    "current_yielding_status": "MAINTAINING",
-    "response_time": 1.41,
+    "previous_yielding_actions": 1,
+    "current_yielding_status": "NON_YIELDING",
+    "response_time": 7.96,
     "lane_change_history": [
       "Lane 1 -> Lane 1",
       "Lane 1"
     ],
     "acceleration_history": [
-      -1.05,
-      -0.87,
       -0.81,
       -0.94,
-      -0.83
+      -0.83,
+      -1.25,
+      -1.29
     ],
-    "driver_compliance_label": "High"
+    "driver_compliance_label": "Low"
   },
   {
     "vehicle_id": "V019",
     "previous_yielding_actions": 10,
     "current_yielding_status": "YIELDING",
-    "response_time": 2.93,
+    "response_time": 1.73,
     "lane_change_history": [
       "Lane 2 -> Lane 1",
       "Lane 2"
     ],
     "acceleration_history": [
-      0.73,
-      0.68,
-      1.0,
-      0.81,
-      0.6
+      -0.01,
+      -0.2,
+      -0.41,
+      -0.15,
+      -0.31
     ],
-    "driver_compliance_label": "Medium"
+    "driver_compliance_label": "High"
   },
   {
     "vehicle_id": "V020",
-    "previous_yielding_actions": 10,
+    "previous_yielding_actions": 8,
     "current_yielding_status": "MAINTAINING",
-    "response_time": 2.93,
+    "response_time": 1.9,
     "lane_change_history": [
       "Lane 3 -> Lane 2",
       "Lane 3"
     ],
     "acceleration_history": [
-      1.06,
-      1.27,
-      1.13,
-      1.48,
-      1.21
+      0.87,
+      1.22,
+      0.95,
+      1.19,
+      0.7
     ],
-    "driver_compliance_label": "Medium"
+    "driver_compliance_label": "High"
   },
   {
     "vehicle_id": "V021",
-    "previous_yielding_actions": 0,
-    "current_yielding_status": "NON_YIELDING",
-    "response_time": 9.46,
+    "previous_yielding_actions": 8,
+    "current_yielding_status": "MAINTAINING",
+    "response_time": 1.43,
     "lane_change_history": [
       "Lane 1 -> Lane 1",
       "Lane 1"
     ],
     "acceleration_history": [
-      1.25,
-      1.37,
-      1.17,
-      1.45,
-      1.02
+      1.11,
+      1.03,
+      1.26,
+      1.31,
+      1.48
     ],
-    "driver_compliance_label": "Low"
+    "driver_compliance_label": "High"
   },
   {
     "vehicle_id": "V022",
-    "previous_yielding_actions": 4,
+    "previous_yielding_actions": 6,
     "current_yielding_status": "YIELDING",
-    "response_time": 2.53,
+    "response_time": 2.64,
     "lane_change_history": [
       "Lane 2 -> Lane 1",
       "Lane 2"
     ],
     "acceleration_history": [
-      0.8,
-      0.55,
-      0.56,
+      0.72,
+      0.82,
       0.62,
-      0.61
+      0.84,
+      0.75
     ],
     "driver_compliance_label": "Medium"
   },
   {
     "vehicle_id": "V023",
-    "previous_yielding_actions": 5,
+    "previous_yielding_actions": 8,
     "current_yielding_status": "MAINTAINING",
-    "response_time": 1.81,
+    "response_time": 2.06,
     "lane_change_history": [
       "Lane 3 -> Lane 2",
       "Lane 3"
     ],
     "acceleration_history": [
       -0.15,
-      -0.06,
-      -0.02,
-      -0.13,
-      -0.14
+      -0.32,
+      -0.24,
+      -0.1,
+      -0.2
     ],
     "driver_compliance_label": "High"
   },
@@ -423,11 +423,11 @@
       "Lane 1"
     ],
     "acceleration_history": [
-      1.32,
-      0.93,
-      0.87,
-      1.43,
-      1.21
+      0.89,
+      0.5,
+      0.44,
+      1.0,
+      0.78
     ],
     "driver_compliance_label": "Medium"
   },

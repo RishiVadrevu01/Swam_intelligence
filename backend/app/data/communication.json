@@ -1,32 +1,9 @@
 [
   {
-    "sender_id": "EV01",
-    "receiver_id": "BROADCAST",
-    "message_type": "EMERGENCY_ANNOUNCEMENT",
-    "timestamp": 1793859247.3707838,
-    "sequence_number": 1,
-    "message_content": {
-      "emergency_vehicle_id": "EV01",
-      "priority_level": 1,
-      "target_lane": 2,
-      "intended_route": [
-        "ROAD_01",
-        "ROAD_02",
-        "ROAD_03",
-        "ROAD_04"
-      ],
-      "destination": "INT_5 (Hospital Junction)",
-      "estimated_speed": 62.5
-    },
-    "signature_hex": "3045022100abdc206b09e221abba57bfde2d9be09216ee8480448e12b2497440b5cf78c4cb0220467e887e3f3236c89301d907015b060ffd46c27fc17c23886d886505bf2a6ab1",
-    "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEeYxHeBsP1YSofaIBQ78c/RS0tlBU\nIjgwOZDOlM6acvhKxAOnEE/2ZEI1Hbf6CbKfwAMZowkaiUw5GWGuhNQWSQ==\n-----END PUBLIC KEY-----\n"
-  },
-  {
     "sender_id": "V001",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859245.6244648,
+    "timestamp": 1793860067.7208803,
     "sequence_number": 11,
     "message_content": {
       "latitude": 37.776167,
@@ -35,15 +12,15 @@
       "lane": 2,
       "heading": 48.94815801891397
     },
-    "signature_hex": "30450220201ae5be17670689611c675247e8dd97cb708202a97056d26773abb1c66ae8b2022100e9ae0c0a6e4f3172e550be90dd794c870e7879b0cce1b35e6dfd8bf5aa6983c9",
+    "signature_hex": "3045022038f568159561e62838583b1877fe3dcfec311c3593019b9dc511cd0635003326022100a5980597392669c1e62d2dee8f44cfd55c460daa8b834b079c27920807df03f7",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEX03A7rj7ckrlFmjYP82wRkdQLiqH\nt3TtEP02tG/t4tdjZ/ZYnqc3DfrmjOokr8BCvD6KpLr151k6ST8Ddip4lQ==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEz2/zqg1wRBVPIuyUDx31snprLtVA\nuJRxreQWldC/MONBzKU5+ufnpEw2g0hJMowKDtP0EuPeYFGtbYo89JopEA==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V002",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859245.9632761,
+    "timestamp": 1793860068.0596917,
     "sequence_number": 21,
     "message_content": {
       "latitude": 37.780097,
@@ -52,15 +29,15 @@
       "lane": 3,
       "heading": 49.46838132429334
     },
-    "signature_hex": "3046022100c9d990cc97fc8d54da1b331443c44e9ac38581aae669cc7b6f0a2e3d9a01ab30022100955395338690a14a5502c45700b92c0e2598dcd7d64d27878be239640b55ed09",
+    "signature_hex": "3045022100d15e46f34f4d7e76594cffdcebc83518561865c346043371c438d8766e8b7b4d02207ea5321e849e736ff2c724eae21b22e750ff4835604048f789a7da7987356740",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEr6SurzJ7KbfEclHXEo+m9lw8pPG2\nwsPX2hVj4S+Os0gFbwFW+CGGh77HR54xIqbBISBGVYRLjuOtS2o4L1GFDQ==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEBAO6kw1ddSbW/fTOy9+jKdw/rShV\ngu3YP30PD9lL4Klta2VmzMa3i0QUouV2iqYSp/r5KW4JwjkbE7Io0koBXQ==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V003",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859247.0054862,
+    "timestamp": 1793860069.1019018,
     "sequence_number": 31,
     "message_content": {
       "latitude": 37.781588,
@@ -69,15 +46,15 @@
       "lane": 1,
       "heading": 44.529508841692376
     },
-    "signature_hex": "304502203703e42c6effedc99cf689967b72c1970b6283f558d37c797aa86027d5b8d5f60221009710f8918cef38742504ec90818e2ff8b10324ba775cc12f0a38532af743d562",
+    "signature_hex": "304502205a389ffa7b72b26d05aaa43c8fdcf509621e983d5c1beb3686da340f0c6bd2de0221008b5f8acbf5d7c74637ed127bd63728e467fa9c0cdf5af0a9e2df3e440a75e522",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAENL0qoRGdPp/6pTkxZWeE0GcOf3qO\n99wZfWZAEuSTwqWVF/d36slTPX3xJKgnzHtxn8YA67veSJHHoRVxrWlVQw==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE2uKvUa+gs8M5s1SFjXpnbK5OEodl\nvHYGDXHt3ByINi3IYYapFoHQ6MQWc0A/YPKP+RL93XKs95ztn61szGZCKw==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V004",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859246.539726,
+    "timestamp": 1793860068.6361415,
     "sequence_number": 41,
     "message_content": {
       "latitude": 37.786173,
@@ -86,15 +63,15 @@
       "lane": 2,
       "heading": 45.106653959126845
     },
-    "signature_hex": "304402205efabb16be7ce39375b3c5019ba3f313b3c05b84bea53d052b088a33cbf08253022015e6b76f15b96b26e639ee537bbdd32d7201fbf7b09f12bf5b0abc938bbd111d",
+    "signature_hex": "3046022100d651761d4937ee7cc442b2a7a573f5ffe2885985a8f8039eefd653f4e9a2cd92022100c9ff380c3d9651e5d2484925d715672a09fc42600aab6aeb8f230dc624ff4b97",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEiI9dbbmjVjaVkTW2M9tL9hYOi6cp\nSVngBThW9k8gajSbs6j5uBtCh1qwvfx/sljaNgo6ksRjeOQQS+3tlV3yNg==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEaC9HNnd2Tp+Tvo+C71tKCC+P8TQI\n+Reqkl87VHaRN/QUvML1mvVb7CKjlG3+gOo7Hz3ylqa/e18FknbuFKhpnA==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V005",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859246.7703445,
+    "timestamp": 1793860068.86676,
     "sequence_number": 51,
     "message_content": {
       "latitude": 37.779755,
@@ -103,15 +80,15 @@
       "lane": 3,
       "heading": 51.078307601032876
     },
-    "signature_hex": "304402206ecc8e539c94a417aeb96103af5650ac561dc0501e2936d5a433014a3faa0b7a0220348bfe3202671175fd7c6e612209c596b03c5578a890999a3ffa005c466f743b",
+    "signature_hex": "3045022100a9a477394224853fb01e305fac568b27f649a3c04a0eff6e885138e263f0f9d6022067da1ac2683fe4dac2d9e7193994cf10d6ee817b4914f52cd0db852deffd99b0",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEI53GhCrcDdUVBY2GOoFTO7RoMVRP\n8g2VgmfGmfjY8GpxswlryQZuMlfYC5Pjhiymr2wznY3S5aV3PEtrtygP6w==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAExT2ru2+7zBj0dr6/H0E6NpSpECWP\nas3y99fmnz1tyv7HthFvk82ocPdmYNfyHbh6xZoYGqznyy0xN3EJjU6sNQ==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V006",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859246.5811203,
+    "timestamp": 1793860068.6775358,
     "sequence_number": 61,
     "message_content": {
       "latitude": 37.781399,
@@ -120,15 +97,15 @@
       "lane": 1,
       "heading": 45.22271414839708
     },
-    "signature_hex": "3045022100abc6998d535770a303d4c3b4208f35894960363936792682e6577007713e80000220099fcd76a97f9221bf9d25e5b1c436d414f83cf53202acb419223058e31e44bb",
+    "signature_hex": "30440220050ea779f5dabc3e06564fa748681aa8da7ad673d0d6b3b8c5c2bd6fd64fe745022066c295cf14023ea5ecc1bbb9e811014f6b0280d1a12176c83f2a9e367d609264",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEzrSJ756KPop0s7aXcW0WybxUx0Kv\napGetkiOH6GAFV8Wv46ffL8hrqAwKCUW7QnTVtpEe7qmhyrzwKbb9pZshQ==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE2bvZZL24PwNCwmXiqBQWQdHTr80l\nETpYakXqmaCQlvH6Y5DtFxlZn1gkTFsU+a+hPWHwJM7aRTcnHOkaOHQVtg==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V007",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859245.4384942,
+    "timestamp": 1793860067.5349097,
     "sequence_number": 71,
     "message_content": {
       "latitude": 37.776698,
@@ -137,15 +114,15 @@
       "lane": 2,
       "heading": 50.52818602736071
     },
-    "signature_hex": "3046022100e802317107de91d8136af53c390a752fc95831f26d7b9d790f7047f8fabd5df1022100b71c25ca95354b1a7b75b13a1effc3cfd73269fa2f218ed2d36f69a07ab49878",
+    "signature_hex": "304402200989c2a3b756d1032747898229b3946fc223dce8b8c44c841036dda40a3aac3e022037bf89a23fa1414e2fdd8ac80260c58643e411b852c31f730cbb9943eaa84a76",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEXqwR72EWfVvkLli7pqAdX5OK01Sj\nMndUsrnugi6r8+ic8N+bBsbtoyQydXBsLd1KFEn1imtRG+vokY3Uupv2xg==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEenFBdeWcWqMtjUyUrDtbYWqLIT+7\nGVzRkTRnFt1UqQ3XJZRsrTE2Z6r2trM1RFF6xB2qURbw8pQzZOBdtsrMOQ==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V008",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859245.925886,
+    "timestamp": 1793860068.0223014,
     "sequence_number": 81,
     "message_content": {
       "latitude": 37.780628,
@@ -154,15 +131,15 @@
       "lane": 3,
       "heading": 51.196912677143565
     },
-    "signature_hex": "3046022100d3a56dbc126e35fe4b7d5da52e4923066503d38b5aca66d1b50204a2ac58b9bd022100a1b8c652f47aecbaafb3577e379cea0460bc7fc9a8bee9174929ae42dadc8ab7",
+    "signature_hex": "3045022100cb0b32ccfcda253f2e4fa91b5f2e4a3932c7e7c7e30ec225a15560b886de35e6022028c4d67ead64edc1ccc670da93ca4c7aa9f9bbbedd5574d4041784dcdb4482e0",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE/P2Y2eu3Y1JofJ3t7DtmHRLWBwdM\nI8W2yituRh4Ng93HRODMvnFqB1Kk2q5DGqXhrdm4HZ0CVuzyV7K1Cfr/9w==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAELx62M0W+n7rxWhfSmtor1eyHd3Pt\nqNJgQMyaNvqtmggVM+WBA8hUU5w/6R5wnEc0QquaDeIM3nde3mAwxDCXXQ==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V009",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859212.3707838,
+    "timestamp": 1793860034.4671993,
     "sequence_number": 91,
     "message_content": {
       "latitude": 37.782207,
@@ -178,7 +155,7 @@
     "sender_id": "V010",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859247.0044374,
+    "timestamp": 1793860069.100853,
     "sequence_number": 101,
     "message_content": {
       "latitude": 37.786792,
@@ -187,15 +164,15 @@
       "lane": 2,
       "heading": 49.22764390612633
     },
-    "signature_hex": "3044022018b3b54b5dc047e8bad2ab134273abc0e375fa59fcd7cde0035cb0dc4db35f5a0220352bfe36995606f90960fc190a3c16e0711c3fd890823b3317944bc5fe369f12",
+    "signature_hex": "30450221008d950c7c5576da01d545a2b4733680c698afd9af7e66aceff8c8c5a70b58630e02204e183b677550102971ddacc8caf8dd1775e53d0c01cfe63a95d2b5db824a53f1",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEnCjFe+9FYKonRDDJ/y9Fe/G7G7qA\nXhbfjYQJfdNBiWZxpjGryeNTeIbjPwAxeoPL6m+qw4bt7vOXqvwhnqfx1w==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEngUjiRCPoESZlmzvT+cMchmrnTIv\nQC47RQTMqiZxi85EbZTiEvt+//B3hIr7QNbAQDesu4/mSbHIv7aVzwpXAQ==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V011",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859246.5088072,
+    "timestamp": 1793860068.6052227,
     "sequence_number": 111,
     "message_content": {
       "latitude": 37.777434,
@@ -204,15 +181,15 @@
       "lane": 3,
       "heading": 49.21715915198818
     },
-    "signature_hex": "304502202615c2e7d8f8342924dc466dbb13c2e99012d782696a03813b2ae977ac161ce3022100905ad49df6dc5f4ff66a054222221c80c421248c03cf200a1fe0482f7832d7d0",
+    "signature_hex": "3046022100fb3fa251d2b0ba7bd5b56ddfdb032979879f4f48ddc1169e5eacf2b452e66d50022100a3f8394c135348ea445c975734e479092bc16cb7255c3f3b817b5d4de0f3786b",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEip6HVvFeC6ApEPPDvBqHSfY0As7E\noFAOH6ERl63ApnJLl6pFEih6PP3H+OBLQJ2vlVr4uwwRN+0NsfkGLOdYBQ==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEudPEHxwy2YQRMufX6oiksm9gIg22\n+YFemI9TZbkO4+zqgiiHpxzaZyYyCV3hi1J0GP324VEYqv6bMAjfCQXxEQ==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V012",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859245.8496304,
+    "timestamp": 1793860067.9460459,
     "sequence_number": 121,
     "message_content": {
       "latitude": 37.782019,
@@ -221,15 +198,15 @@
       "lane": 1,
       "heading": 51.65854112687739
     },
-    "signature_hex": "3045022100db463a222aaa9763854691b9ec4e6ccf7e1200d5f5de6beb869aa6cb667ffa13022056e0cc4df710b522e5e70c57a1821b30bac373236df7e39b78f419d970a41107",
+    "signature_hex": "30450220712bd4ea8572edae07ee761134c515ed2f3a680d9ec4f717d55c683736e71bae022100d6cd020e5144583128f5b69705cb71ea9dbf981afd781bad4b48394aa474d3ae",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEt4EZhcLfh1y2806AwaJYrZUnyz4h\nuvTUknXoDpYddaJT2kE7r5YEjqB3Ukk9rhhmiYrQpCQbxM2a6d7rNdlotA==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAf/imVAewMNMIzZnBofzM6glZR7K\nkFZqtaMrJSnb1Zg/9jaB/QM9J6MWb3tVOAPAEu/Ia+H58v5qKo3CTqJslg==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V013",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859246.0939589,
+    "timestamp": 1793860068.1903744,
     "sequence_number": 131,
     "message_content": {
       "latitude": 37.777229,
@@ -238,15 +215,15 @@
       "lane": 2,
       "heading": 45.48659968784578
     },
-    "signature_hex": "304502210099b32a7e13efab5a266dfb6b092b5a7be7eb54bc35b453cc0146f33f870efc1302207c71498b9392eee427d236ae846b4fc82dd6eb478675996c49fb5e34f61ed8ba",
+    "signature_hex": "3045022068eda7a95c11fef25d1e61e36b234991f6e7e19698529c758ecd6e0f4c40e6d8022100fd2675ddcb0c10eb09caef89ef631e0f08eba0991cee5bbb9e4b2762a5fa9104",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEQU5OKwkEHuHdmInRc1myif1Za5p5\nhFOZusqPeG36U2EMixsYxeHkxMGKCipz6y4w3j+dG0Dx84l+dmFw6hedsA==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEVsnszSW2plT3W0CN+RxRiVWNrHh2\n9x3JzTS41jzMbqxVSxByAHFsIWRWgWbI/Caj4y3wDPxL5hGuEZVxgVYdKg==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V014",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859245.3782005,
+    "timestamp": 1793860067.474616,
     "sequence_number": 141,
     "message_content": {
       "latitude": 37.778639,
@@ -255,15 +232,15 @@
       "lane": 3,
       "heading": 47.16628677433003
     },
-    "signature_hex": "3045022011a3a4427d1417a3301b866274afb72bb89adf4868a8124456a73bae7da3a226022100a05f8d344bd0b1ed83db81e48598262756d67bed1f1c1259b15a1726320cc78d",
+    "signature_hex": "3045022100d30b38298d914238b0234e6c384431cdffc33c0f190e46a9bc6834bbc74a892e02202674716dd50aa5f2777687a35f37d83399c5f8b58d70c55c1191de3102c22d20",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE6U5aiCFYkAiG5obfXXL58BGFWU39\nQfTJyaDk/c1PWilBwHm1cO8bSvrVTIzRz/TjmFSZUQlo4yorY4KNOU86bw==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEg8bcQrCL7YqbJFDS+lbvoUKzoUyC\nS6ions+sQOyuebgWHMOZd21a7Q4+1Lm/Rg4h9+fxS+klRyoNDIT0cKLoHw==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V015",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859245.5004473,
+    "timestamp": 1793860067.5968628,
     "sequence_number": 151,
     "message_content": {
       "latitude": 37.782827,
@@ -272,15 +249,15 @@
       "lane": 1,
       "heading": 45.26197465885785
     },
-    "signature_hex": "3045022100e98af775cab8d050f58c5b95a3cb4f9eb6559e6ace4f4ac162d0d1bd14a4c09302201c8fe0e4df0ff394cbcdb6d6f3ea0b14cc37ebe63cbeca852bd41e11c94c3399",
+    "signature_hex": "3045022040ed75cb6e59096afc0e004cf99cf04033d617fef41ffb38bdff15f041223ad7022100822e950830701adc14e9269d2d8ef9852a7b21ea6e6f358ac706a9538f97d3a4",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEByQtkNUbssVbBs8L4vx/yNZ0DxO0\nKBzZrMt4m842/JCsC+nnYZltjUILT1CeSXyUrA3cemzlu4Nt2PBcZJ8VMA==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE0Yq5k7ZqvUlH9KDbVKszhFRk5Tzm\n2C6SUbw0i2RUP7LzJ+ZeaPeP5vFo74wqiS3xEmdAu6Mw21INaYIr+pU94Q==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V016",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859246.0656433,
+    "timestamp": 1793860068.1620588,
     "sequence_number": 161,
     "message_content": {
       "latitude": 37.787412,
@@ -289,15 +266,15 @@
       "lane": 2,
       "heading": 45.68503723845554
     },
-    "signature_hex": "30440220377df8b7603344608384fbd3caef9060ef0b484b4eb9bf06a862a7823499b06702203c9d5c09058c82bc46d33e367c3e8e0a5b83529465ec0ebd062c94dcae19a57e",
+    "signature_hex": "3044022004950cd5396f94f3a1b45385c2c1d7f556699a1ab620e53cdebfd1cfd3cbc07102206c3077e2e812858338aa182d456fc3e17859633b82bfad07e0eb2f30eae5e2d4",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEwV1l12fl3CLqQm7NsRqy2Tn0/YpY\nVm+UPmfFyZ5Z9EKdvvTF7yuWw7TdzGVuKP+pn8sQYx1yQIitzfgXvAOGMA==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE31ccnNV5v+1S/OvkotZix9RnEM3d\n8oLKRpS2+EDqXheEw3ZTm+YojQ9Zr0/ctvXRs94eA4ToP9I94nlAps1RMg==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V017",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859246.2209861,
+    "timestamp": 1793860068.3174016,
     "sequence_number": 171,
     "message_content": {
       "latitude": 37.778053,
@@ -306,15 +283,15 @@
       "lane": 3,
       "heading": 49.64533957407993
     },
-    "signature_hex": "3045022100b7215ea35d930ae81b7a0c510c72892076821df774478f3d5d0c16c18d637a2a02204fb3356b44b054fd2ac1d14c87e7e6b1f734bebd9e1c25b94bc50af087d2ca64",
+    "signature_hex": "304402206909341d1a0dbf260c618841c0d1a0b8f2f5183eaa02bece52a6d24616664813022029ad9c64bbd2f42853ec0b5c17f1405b1d64c20290efc90e8b4659b551634935",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEEjcrOUD7MCt/8kaJuoFZTsnPSNVf\nULS1bg6aCoOysLgabxR+GI9uNvFapMOqluWtzMFoMCZysIJZAdL5IkSNNQ==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE5wyenMhgJotMLbG9SLuoq9UwDweQ\n0pTe3pCO5h5IpcWvb/lM27e6QmXBsE0CyFUEtq0iCZIhGMUHFg41S9PRfA==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V018",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859246.820983,
+    "timestamp": 1793860067.847414,
     "sequence_number": 181,
     "message_content": {
       "latitude": 37.782638,
@@ -323,117 +300,117 @@
       "lane": 1,
       "heading": 49.45653350648461
     },
-    "signature_hex": "30450220097ebb1738859852d540751e24d7093f169d9ce2d68e25052e17fd811ed5040c0221009b3435d66e718cfc36e06af253cb705f412066630e288c32709e62a5df2457b7",
+    "signature_hex": "3046022100d676e5be42fd09b806db006c01da8f95f60cdcf96502ef278b65d425cbcafa950221009b143a0f9390610db78e2ab4c2d93fe5d2ce1607b871ce75f141037083153835",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEUrItAE9xSHAd74w1dQeZscwp8AZe\nHw/1ynpTw0/LewXcxCxglybXC4kC+xEKnWVDwrgMhEJV3Czb6UJx1Fwn2A==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEiQsWYvfYd2miT4ZFLN6ho9UQ+BGh\ngkXDjylgh4tZwvcaNGC4pRNoKM6D+wrCgktZLcGXI9yJK20uAxnc8Xxm7A==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V019",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859246.3764727,
+    "timestamp": 1793860067.6221406,
     "sequence_number": 191,
     "message_content": {
       "latitude": 37.77524,
       "longitude": -122.41984,
-      "speed": 35.6,
+      "speed": 35.9,
       "lane": 2,
-      "heading": 47.29370533241243
+      "heading": 49.88046031062301
     },
-    "signature_hex": "3045022100a670f896d51db0b4ca209028aaf76cb00ca7589fcec7bc3f28506ba528ac356c02206b103ead62715ee369c4bdf261a6a3a811899ef1180637e31d9d23ed6a98d85d",
+    "signature_hex": "30440220221ad9b2fdb07cb6f64a721192283edf6ba5c1cfbde655c77d95d7a08754058702201bf67f89bbfe32d00cc9cd24f0eeab6e8355135b55f69b87fdafdcd3ee96954c",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEwGlRYkYVKx5E6PxCH6AE3IPBmxjt\nwuXH/7Dp8lUZ/nqHY5HQn37Gn3WlfpA7AtoCWCBL5pAHB33nxQ/kMpqMYA==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEl3NjRV7mUbDc5Bu7CGWRlyZsIbeE\nf4W94NCUF7g9n8R1i80OTiK8VEBM5UfQQuv87XjyvUapRByyp3dxr8t3JQ==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V020",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859245.4862332,
+    "timestamp": 1793860067.5234382,
     "sequence_number": 201,
     "message_content": {
       "latitude": 37.779167,
       "longitude": -122.416833,
-      "speed": 36.4,
+      "speed": 39.7,
       "lane": 3,
-      "heading": 47.18772782851827
+      "heading": 44.55536603730256
     },
-    "signature_hex": "3046022100b51ff43b5ebd032df399c3e95fedd5ddfdab09ca34dd5f9934630512b7ffa7ae022100fa8ae7a5f8b3dcd0b612baa0c04134c6c40cb536772b18a6665a986422de9252",
+    "signature_hex": "3045022020f5f8c99c65a0c8a570acea406ab5e08636169afc336e353a62c5bad8e068d1022100bdfb6030063ec920a6b78e53b1d4015d847ad7bb7805620e1b90776865e9d439",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEvARUCsL6YRhKOCdYztivMg/D4v8o\nz5/utaZtjUUtzOogt0oh6iYx3mOhVNjwWkeSDU9Vm0ZJcV9jxSC3KvV30g==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEjz5rOh5/3YLTlHYAfiES6IZDdfBd\nfaLO+bsYyFmTpvDii4KlLSPsBsQGRefcISA1s+elgq/5NtIoGCxUlaOFWQ==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V021",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859245.512191,
+    "timestamp": 1793860068.0621707,
     "sequence_number": 211,
     "message_content": {
       "latitude": 37.783447,
       "longitude": -122.412204,
-      "speed": 34.5,
+      "speed": 35.9,
       "lane": 1,
-      "heading": 49.82836048522164
+      "heading": 48.84967082644915
     },
-    "signature_hex": "304502210098147b5df9c8783b6a243a9db60f780cc88bc16681a6ca9b46ca6791c7cb8a620220788393811f0976b97ea760c0f1957cab67ed9f322ab90c541aefee7570518d12",
+    "signature_hex": "304402205c7dbe3d5ed4a0a8efbb6323096e230420095ce44df3e1b991f543922b4f3ffa022053895083a11f3088af72c74b93c0f832fe506dbef50058c8668713cf061b183d",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEngRN1cCUHfdbNqnnQxJNsPQE+woT\nINXOU/ZatVUMLo15TR1ir1p1qSGmr/PBfS/iQNz+WRc7hMEA6mKrHBKUZA==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE7Tnx8DhUSgF6e5lPoBEqlXqRTTge\n73Kj0RwP7txpefjRNLsjdTSE5RNRB7nE/uyTI+IMuyZWwyistIirJ56UXg==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V022",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859246.709039,
+    "timestamp": 1793860069.0027032,
     "sequence_number": 221,
     "message_content": {
       "latitude": 37.785088,
       "longitude": -122.410328,
-      "speed": 43.8,
+      "speed": 52.7,
       "lane": 2,
-      "heading": 46.64160028834077
+      "heading": 49.307099810124356
     },
-    "signature_hex": "3045022100a2b56c509b3b3d1175b9337bfd8bf7b083138317a85bcd56c4d65ac8e055571402204b5132560b0a817457a3f670e5e656edeb2c44a830036761cfbc9c6cd3bc4523",
+    "signature_hex": "3045022100ec8a7c1151417ba8ecb990f3f7a54e91151908ae535ce5210016e9217b8847df0220368517cbee490df339d029d8e1ba857ce2fe14cec58e2cc1f75e7318233e68f0",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEDXev3Q2/Vn8Z9ZBAEk3D9eqkWO6d\n02nZzX3PwGD8mvIPdxZWs6xfFtDdJjsZ6MRpYXvXOJmalNrhp95pBVy1sw==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAERG6LcLpwFaBGyo7HnxQXcriIBMq5\nWfnwLKtxUSQ6nfcaSQHt++JXQwvgTyQBt0IMOQ1jew/E/cUhGg7r3YpV9g==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V023",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859246.864751,
+    "timestamp": 1793860067.859102,
     "sequence_number": 231,
     "message_content": {
       "latitude": 37.778673,
       "longitude": -122.422088,
-      "speed": 34.8,
+      "speed": 46.6,
       "lane": 3,
-      "heading": 48.38349770508559
+      "heading": 46.43099959414683
     },
-    "signature_hex": "304502207b877b14226b206d2cb22d1329dea143bc62288591c5312b784780c5def8472a022100d0d7b87d9bb329b7590e085a6d51394194b8b8d7fb7fec3307506b1f59ed8731",
+    "signature_hex": "304402204a1cb565a3db7113564eaad2a57fc1ff5d5454a85568accf79466a405e0f957f02207569544b301e86adb030436975714f4bde22677e78100212c53bed2c75cae85c",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEuD0WI0VTfw/0airkRc/7TcJ6PIwI\nbg4/yaeuV1RB+w78nhHnyzNBPBVy5EjKkGdUwl4BQOqK4piLIE8tGY+U5w==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEiAS4wvGly+uvS91OwBLNtTr68KIS\nlZrdkLUCABDUhfqOSqdndsOze5Fgdsgy4euv5/UqRk1EmJIYCDveRe8+OA==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V024",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859245.8106542,
+    "timestamp": 1793860067.9070697,
     "sequence_number": 241,
     "message_content": {
       "latitude": 37.783254,
       "longitude": -122.416852,
-      "speed": 42.4,
+      "speed": 53.1,
       "lane": 1,
-      "heading": 46.681506043278404
+      "heading": 51.6159972996198
     },
-    "signature_hex": "3046022100f934098091dfde0ddb30de57aa43e372f4a6430ae28e1f98206413f5b1a3a0ae022100f53b927c19a0fc608ca2511199444d10ef2cca55ce3885d72a267f0477c2e96b",
+    "signature_hex": "3045022020558fa8969159bd92d483dbbe9c22a63fa9ab2dadefe747f524b21e4a61b576022100a49d2dce175381cf11902446f1a0552a1dfb5a081ff032cd65424bf90e8077c5",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEz3TxqiS4pmDGh0qbdZzmme32DWd/\nMvEEM93hUvmGBrqYXxjTHunxOM0KG7SshsWF/hbi7Gtqc2Clfx2T9FfP8A==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEH32lyAAi3W2m2wciRj9zSb09nhs4\nmKc+Ky7jEtk1toVnkDX/3tt6/ivb2lGnZw+yPpZd/9nrHVxcz/JazcvP0g==\n-----END PUBLIC KEY-----\n"
   },
   {
     "sender_id": "V025",
     "receiver_id": "BROADCAST",
     "message_type": "TELEMETRY_BEACON",
-    "timestamp": 1793859245.6589448,
+    "timestamp": 1793860067.7553604,
     "sequence_number": 251,
     "message_content": {
       "latitude": 37.775771,
@@ -442,8 +419,8 @@
       "lane": 2,
       "heading": 49.500979304644154
     },
-    "signature_hex": "3044022026405d6867f9705b5914dc3945568268028e4339138e9571c82ef36d34b562ff022012920ad138082aec3a6a706973db2970de52914f97e415b96a981ba56cbc348f",
+    "signature_hex": "3045022100d1f29ec7fe4adadf4f19cbcdfe1e069606017db9d5222c4d79febdc62f9a1f8402207240d680c5d4a300230f73746a1f8b1201eeecd852ecf4e034831e77a7bea7d0",
     "signature_status": "SIGNED",
-    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEFUX/XDgW2j5vgLwAtQ9hs6BCgA87\n/tYDBxpEYdXwfM/5A+VJiAzThs7/W4Dir4kJ7CqRGvxIVKHq+OOyjR7wCg==\n-----END PUBLIC KEY-----\n"
+    "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAElYPyODZXJa3+Q94peedw48/V5Qib\n8D51ooP5Qxt5LiBC4LiqAnmOTrEnZM5YALoftapz0n31SiIFur8WV2dv9w==\n-----END PUBLIC KEY-----\n"
   }
 ]
