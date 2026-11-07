@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "emergency_vehicle_id": "EV01",
+    "vehicle_type": "Ambulance",
+    "latitude": 37.7753,
+    "longitude": -122.4198,
+    "speed": 62.5,
+    "heading": 48.0,
+    "destination": "INT_5 (Hospital Junction)",
+    "priority_level": 1,
+    "emergency_status": "ACTIVE_DISPATCH",
+    "intended_route": [
+      "ROAD_01",
+      "ROAD_02",
+      "ROAD_03",
+      "ROAD_04"
+    ],
+    "current_road_id": "ROAD_01",
+    "target_lane": 2,
+    "distance_to_ego_meters": 120.0
+  }
+]

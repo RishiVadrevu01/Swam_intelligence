@@ -18,7 +18,9 @@ from app.api.coordination import router as coordination_router
 from app.api.corridor import router as corridor_router
 from app.api.dashboard import router as dashboard_router
 from app.api.evaluation import router as evaluation_router
+from app.api.agents import router as agents_router
 from app.core.corridor_manager import corridor_manager
+from app.vehicle_agents.agent_registry import agent_registry
 
 
 app = FastAPI(
@@ -47,11 +49,19 @@ app.include_router(routing_router)
 app.include_router(coordination_router)
 app.include_router(corridor_router)
 app.include_router(evaluation_router)
+app.include_router(agents_router)
 
 
 @app.on_event("startup")
 def startup_event():
     print("Initializing Emergency Vehicle Corridor Coordination Backend...")
+    # Initialize decentralized multi-agent registry
+    try:
+        agent_registry.initialize_from_scenario("Scenario A: Normal Traffic")
+        print(f"Decentralized agent fleet initialized ({len(agent_registry.normal_agents)} normal + 1 emergency agent).")
+    except Exception as e:
+        print(f"Warning initializing agent registry: {e}")
+
     # Trigger initial cycle if not already run
     if not corridor_manager.dpso_results:
         corridor_manager.execute_coordination_cycle()

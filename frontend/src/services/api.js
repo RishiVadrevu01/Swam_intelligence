@@ -65,7 +65,16 @@ export const api = {
 
   // Research Evaluation & Benchmarks
   getEvaluationMetrics: () => client.get('/evaluation/metrics'),
-  downloadEvaluationCsv: () => client.get('/evaluation/download-csv', { responseType: 'blob' })
+  downloadEvaluationCsv: () => client.get('/evaluation/download-csv', { responseType: 'blob' }),
+
+  // Decentralized Vehicle Agents
+  getDecentralizedAgents: () => client.get('/agents'),
+  getAgentDetail: (vehicleId) => client.get(`/agents/${vehicleId}`),
+  stepAgents: (dt = 1.0) => client.post('/agents/step', { dt }),
+  toggleAgentFault: (vehicleId, offline) => client.post(`/agents/${vehicleId}/fault`, { offline }),
+  triggerAgentNonCompliance: (vehicleId, refuseYielding = true) =>
+    client.post(`/agents/${vehicleId}/non-compliance`, { refuse_yielding: refuseYielding }),
+  getAgentNetworkStats: () => client.get('/agents/network-stats')
 };
 
 export default api;

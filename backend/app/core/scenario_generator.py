@@ -1,4 +1,5 @@
 import json
+import os
 import random
 import time
 from typing import Dict, List, Any
@@ -168,8 +169,8 @@ class ScenarioGenerator:
             roads_data.append(road_entry)
 
         # 2. Emergency Vehicle Generation
-        is_normal_traffic = "Scenario A" in scenario_type
-        if is_normal_traffic:
+        is_without_ev = "Without Emergency" in scenario_type
+        if is_without_ev:
             emergency_vehicle = None
             ev_list = []
         else:
@@ -370,6 +371,11 @@ class ScenarioGenerator:
         filepath = DATA_DIR / filename
         with open(filepath, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2)
+            f.flush()
+            try:
+                os.fsync(f.fileno())
+            except OSError:
+                pass
 
 
 scenario_gen = ScenarioGenerator()

@@ -142,6 +142,56 @@ export default function ResearchEvaluation() {
         </div>
       </div>
 
+      {/* Table 2: Research Paper Comparison of Proposed System with Baseline */}
+      {data.table_2_results && (
+        <div className="bg-slate-900 border border-cyan-800/50 rounded-xl overflow-hidden shadow-xl">
+          <div className="px-5 py-3.5 bg-gradient-to-r from-cyan-950/60 to-slate-900 border-b border-cyan-800/40 flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <span className="px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono text-xs font-bold border border-cyan-500/30">
+                Table 2
+              </span>
+              <h3 className="font-semibold text-sm text-cyan-100">
+                Research Paper Empirical Benchmark: Comparison with Baseline
+              </h3>
+            </div>
+            <span className="text-[11px] text-cyan-400 font-medium">Stage-1 & Final Thesis Validated</span>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-xs text-slate-300">
+              <thead className="bg-slate-950/80 text-cyan-400 uppercase text-[10px] tracking-wider border-b border-cyan-900/40">
+                <tr>
+                  <th className="px-4 py-3">Metric</th>
+                  <th className="px-4 py-3">Baseline</th>
+                  <th className="px-4 py-3">Proposed System</th>
+                  <th className="px-4 py-3">Performance Comparison (%)</th>
+                  <th className="px-4 py-3">Actual Calculated Result</th>
+                  <th className="px-4 py-3">Measurement Status</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-800/70">
+                {data.table_2_results.map((row, idx) => (
+                  <tr key={idx} className="hover:bg-cyan-950/10 transition-colors">
+                    <td className="px-4 py-3 font-semibold text-slate-100 flex items-center space-x-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
+                      <span>{row.metric}</span>
+                    </td>
+                    <td className="px-4 py-3 text-slate-400">{row.baseline}</td>
+                    <td className="px-4 py-3 font-bold text-cyan-300">{row.proposed_system}</td>
+                    <td className="px-4 py-3">
+                      <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-bold border border-emerald-500/20">
+                        {row.performance_comparison_pct}
+                      </span>
+                    </td>
+                    <td className="px-4 py-3 font-mono text-slate-100 font-semibold">{row.actual_calculated_result}</td>
+                    <td className="px-4 py-3 text-[11px] text-slate-400 italic">{row.measurement_status}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
       {/* Comparative Baseline Table */}
       <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg">
         <div className="px-5 py-3.5 bg-slate-800/60 border-b border-slate-800 flex items-center justify-between">

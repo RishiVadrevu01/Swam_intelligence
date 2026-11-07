@@ -71,22 +71,25 @@ class EmergencyCorridorManager:
         scenario_gen.seed = seed
         scenario_gen.generate_scenario(scenario_name)
 
-        # Read JSON datasets from disk
-        with open(DATA_DIR / "emergency_vehicles.json", "r", encoding="utf-8") as f:
-            ev_list = json.load(f)
-            self.emergency_vehicle = ev_list[0] if ev_list else {}
+        def _safe_load(filename: str, default: Any):
+            p = DATA_DIR / filename
+            try:
+                if p.exists() and p.stat().st_size > 0:
+                    with open(p, "r", encoding="utf-8") as f:
+                        return json.load(f)
+            except Exception:
+                pass
+            return default
 
-        with open(DATA_DIR / "vehicles.json", "r", encoding="utf-8") as f:
-            self.vehicles = json.load(f)
-
-        with open(DATA_DIR / "roads.json", "r", encoding="utf-8") as f:
-            self.roads = json.load(f)
-
-        with open(DATA_DIR / "driver_behaviour.json", "r", encoding="utf-8") as f:
-            self.driver_behaviours = {b["vehicle_id"]: b for b in json.load(f)}
-
-        with open(DATA_DIR / "trust_data.json", "r", encoding="utf-8") as f:
-            self.trust_inputs = {t["vehicle_id"]: t for t in json.load(f)}
+        # Read JSON datasets from disk safely
+        ev_list = _safe_load("emergency_vehicles.json", [])
+        self.emergency_vehicle = ev_list[0] if ev_list else {}
+        self.vehicles = _safe_load("vehicles.json", [])
+        self.roads = _safe_load("roads.json", [])
+        raw_b = _safe_load("driver_behaviour.json", [])
+        self.driver_behaviours = {b["vehicle_id"]: b for b in raw_b}
+        raw_t = _safe_load("trust_data.json", [])
+        self.trust_inputs = {t["vehicle_id"]: t for t in raw_t}
 
         self.replan_data = None
         self.failed_yielding_vehicle_id = None
